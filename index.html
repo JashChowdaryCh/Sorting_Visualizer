@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+<body>
+    <div id="watermark">JASWANTH CHILAKALAPUDI</div>
+    <h1> Sorting Algorithm Visualizer </h1>
+    <div id="array-container"class="array-container"></div>
+    <div id="complexity-display" class="complexity-display"></div>
+
+    <div class="controls">
+        
+        <div>
+            <button onclick="generateArray()">Generate Array</button>
+            <button onclick="bubbleSort(); displayComplexity('bubbleSort')">Bubble Sort</button>
+            <button onclick="insertionSort(); displayComplexity('insertionSort')">Insertion Sort</button>
+            <button onclick="selectionSort(); displayComplexity('selectionSort')">Selection Sort</button>
+            <button onclick="mergeSort(); displayComplexity('mergeSort')">Merge Sort</button>
+            <button onclick="quickSort(); displayComplexity('quickSort')">Quick Sort</button>
+            
+
+            <div>
+                
+                <label for=""array-size>Array Size:</label>
+                <input type="number" id="array-size" min="5" max="100" value="15">
+ 
+            </div>
+            <div>
+                <label for="speed-slider">Speed:</label>
+                <input type="range" id="speed-slider" min="50" max="100" value="100">
+                <span id="speed-value">100</span> ms
+            </div>
+        </div>
+
+        </div>
+    <div id="complexities" class="complexities">
+        <h2>Time Complexities</h2>
+        <ul>
+            <li><strong>Bubble Sort:</strong> O(n²)</li>
+            <li><strong>Insertion Sort:</strong> O(n²)</li>
+            <li><strong>Selection Sort:</strong> O(n²)</li>
+            <li><strong>Merge Sort:</strong> O(n log n)</li>
+            <li><strong>Quick Sort:</strong> O(n log n) (worst case O(n²))</li>
+        </ul>
+    </div>
+    
+   <script src="script.js"></script>
+</body>
+</html>
